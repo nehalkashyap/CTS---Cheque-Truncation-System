@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #07111f;
+  }
+
+  body {
+    @apply bg-ink-950 text-cream font-body antialiased;
+    font-feature-settings: "cv11";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: rgba(214, 168, 79, 0.3);
+  }
+
+  *:focus-visible {
+    outline: 2px solid #D6A84F;
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #233C5C;
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  .ledger-card {
+    @apply bg-ink-900 border border-ink-border rounded-md;
+  }
+
+  .ledger-divider {
+    @apply border-t border-ink-border;
+  }
+
+  .gold-text {
+    color: #D6A84F;
+  }
+
+  .mono-figure {
+    @apply font-mono tracking-tight tabular-nums;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold-500 text-ink-950 font-semibold px-5 py-2.5 text-sm transition-colors hover:bg-gold-400 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-ink-border bg-transparent text-cream font-medium px-5 py-2.5 text-sm transition-colors hover:border-gold-500/60 hover:bg-ink-800 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm text-mist font-medium px-3 py-2 text-sm transition-colors hover:text-cream hover:bg-ink-800;
+  }
+
+  .input-field {
+    @apply w-full rounded-sm bg-ink-950 border border-ink-border px-3.5 py-2.5 text-sm text-cream placeholder:text-mist/50 outline-none transition-colors focus:border-gold-500/70;
+  }
+
+  .label-text {
+    @apply text-xs font-medium text-mist mb-1.5 block;
+  }
+}

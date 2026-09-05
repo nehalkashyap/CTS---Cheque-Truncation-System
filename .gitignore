@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Backend runtime data
+cts/backend/cts.db
+cts/backend/uploads/
+
+# Frontend
+cts/frontend/node_modules/
+cts/frontend/dist/
+cts/frontend/.env
+cts/frontend/*.tsbuildinfo
+
+# Local environment files
+.env
+*.env.local
+
+# Editor and OS files
+.vscode/*
+!.vscode/launch.json
+.DS_Store
+Thumbs.db

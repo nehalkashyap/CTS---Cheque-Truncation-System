@@ -1,0 +1,10 @@
+{
+  "name": "cts-cheque-verification-system",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix cts/frontend run dev",
+    "dev:frontend": "npm --prefix cts/frontend run dev",
+    "dev:backend": "cd cts/backend && py -3.11 -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "build": "npm --prefix cts/frontend run build"
+  }
+}
